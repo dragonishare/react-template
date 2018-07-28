@@ -16,6 +16,13 @@ Add ESLint &amp; Prettier to VS Code for a Create React App
 
 * create-react-app 1.5.2 (当前最新)
 
+### 浏览器支持
+
+> React支持所有流行的浏览器，包括Internet Explorer 9及更高版本，尽管旧版浏览器（如IE 9和IE 10）需要一些polyfill。
+
+> 我们不支持不支持ES5方法的旧版浏览器，但如果页面中包含es5-shim和es5-sham等polyfill，您可能会发现您的应用程序可以在旧版浏览器中运行。 如果你选择走这条路，你就是独立的。
+
+
 ## 通过官方脚手架新建项目
 
 方法一：npx (npx comes with npm 5.2+ and higher)
@@ -47,6 +54,28 @@ yarn create react-app react-template
 
 以上方法会在当前文件夹下创建一个叫react-template文件夹，并初始化项目
 
+### 文件夹结构
+
+```
+.
+├── README.md
+├── README.old.md
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   └── registerServiceWorker.js
+└── yarn.lock
+
+```
 
 ### 运行项目
 
@@ -92,3 +121,9 @@ nvm alias default 8.11.1
 
 ```
 
+### tree
+文件夹结构生成需要先安装tree
+`tree -L 3 -I "node_modules" > README.md`
+展示除了"node_modules"文件夹外，其他文件夹三层级内容，然后导出到README.md
+
+⚠️导出到README.md的时候会清空原来的内容
