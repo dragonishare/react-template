@@ -303,6 +303,29 @@ test: /\.css$/ 的 use 数组配置增加 less-loader
 
 `import { Button } from 'antd';`
 
+## 参考文档
+
+项目是基于 React、redux、React-redux、React-router-dom、React-router-redux、antd，更多信息请参考
+
+```
+"react": "^16.4.1",
+"react-dom": "^16.4.1",
+
+"react-redux": "^5.0.7",
+"react-router-dom": "^4.2.2",
+"react-router-redux": "^5.0.0-alpha.9",
+"redux": "^4.0.0",
+
+"antd": "^3.7.3",
+```
+
+- [React](https://reactjs.org/)
+- [redux](https://redux.js.org/)
+- [React-redux](https://github.com/reactjs/react-redux)
+- [React-router-dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
+- [React-router-redux](https://github.com/reactjs/react-router-redux)
+- [antd](https://ant.design/docs/react/introduce-cn)
+
 # 补充知识
 
 ## npm
