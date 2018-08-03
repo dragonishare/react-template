@@ -1,6 +1,7 @@
 # react-template
 
 Add ESLint &amp; Prettier to VS Code for a Create React App
+create-react-app创建的带有代码规范检查和格式化的react模版
 
 ## Prerequisites
 
@@ -219,7 +220,7 @@ User Settings 设置
 改动 1:
 增加`/\.css$/,/\.less$/`,修改后如下
 
-```json
+```
 exclude: [
   /\.(js|jsx|mjs)$/,
   /\.html$/,
@@ -234,7 +235,7 @@ exclude: [
 test: /\.css$/ 改为 /\.(css|less)$/
 test: /\.css$/ 的 use 数组配置增加 less-loader
 
-```json
+```
 {
  test: /\.(css|less)$/,
  use: [
@@ -256,7 +257,7 @@ test: /\.css$/ 的 use 数组配置增加 less-loader
 
 **如果运行过程中发现有报 less 相关的错误，建议把（css|less）拆开两个规则**
 
-#### 添加 `antd` UI 库
+#### 添加 `antd` UI 库
 
 第一：添加`antd`
 当前版本 antd v3.7.3 [更多前往](https://ant.design/docs/react/introduce-cn)
