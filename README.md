@@ -256,6 +256,34 @@ test: /\.css$/ 的 use 数组配置增加 less-loader
 
 **如果运行过程中发现有报 less 相关的错误，建议把（css|less）拆开两个规则**
 
+#### 添加 `antd` UI 库
+
+第一：添加`antd`
+当前版本 antd v3.7.3 [更多前往](https://ant.design/docs/react/introduce-cn)
+
+`yarn add antd`
+
+第二：装`babel-plugin-import`插件，实现按需加载组件代码和样式提高性能，但是需要对`webpack.config.dev.js`做修改
+
+`yarn add babel-plugin-import --dev`
+
+第三：本项目修改`package.json`文件修改,不直接修改`webpack.config.dev.js`
+
+```json
+"babel": {
+  "presets": [
+    "react-app"
+  ],
+  "plugins": [
+    ["import", { "libraryName": "antd", "style": true }]
+  ]
+},
+```
+
+第四：使用方法
+
+`import { Button } from 'antd';`
+
 ## 补充知识
 
 ### npm
