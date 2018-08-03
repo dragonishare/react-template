@@ -1,6 +1,6 @@
 # react-template
 
-Add ESLint &amp; Prettier to VS Code for a Create React App
+Add ESLint &amp; Prettier to VS Code for a Create React App   
 create-react-app创建的带有代码规范检查和格式化的react模版
 
 ## Prerequisites
