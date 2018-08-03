@@ -1,7 +1,7 @@
 # react-template
 
-Add ESLint &amp; Prettier to VS Code for a Create React App   
-create-react-app创建的带有代码规范检查和格式化的react模版
+Add ESLint &amp; Prettier to VS Code for a Create React App
+create-react-app 创建的带有代码规范检查和格式化的 react 模版
 
 ## Prerequisites
 
@@ -16,12 +16,48 @@ create-react-app创建的带有代码规范检查和格式化的react模版
 - yarn 1.9.2 (当前最新) [更多前往](https://yarnpkg.com/)
 
 - create-react-app 1.5.2 (当前最新) [更多前往](https://github.com/facebook/create-react-app)
+- antd v3.7.3（当前最新） [更多前往](https://ant.design/docs/react/introduce-cn)
+
+### 使用本项目
+
+```bash
+# download code
+git clone https://github.com/dragonishare/react-template.git
+
+cd react-template
+
+# 根据package.json安装所有的依赖库
+yarn install
+
+# 运行
+yarn start
+
+# build
+yarn build
+```
 
 ### 浏览器支持
 
 > React 支持所有流行的浏览器，包括 Internet Explorer 9 及更高版本，尽管旧版浏览器（如 IE 9 和 IE 10）需要一些 polyfill。
 
 > 我们不支持不支持 ES5 方法的旧版浏览器，但如果页面中包含 es5-shim 和 es5-sham 等 polyfill，您可能会发现您的应用程序可以在旧版浏览器中运行。 如果你选择走这条路，你就是独立的。
+
+### vs code 编辑器配置 eslint 和 prettier, 开发时实时显示代码检查，保存时自动格式化
+
+安装插件`eslint`,`Prettier - Code formatter`
+
+User Settings 设置
+
+```json
+"editor.formatOnSave": true,
+"[javascript]": {
+  "editor.formatOnSave": false
+},
+"eslint.autoFixOnSave": true,
+"eslint.alwaysShowStatus": true,
+```
+
+# 从零开始搭建项目过程
 
 ## 通过官方脚手架新建项目
 
@@ -76,13 +112,10 @@ yarn create react-app react-template
 └── yarn.lock
 ```
 
-### 运行项目
+## 运行项目
 
 ```
 cd react-template
-
-# 根据package.json安装所有的依赖库
-yarn install
 
 yarn start
 ```
@@ -91,15 +124,15 @@ yarn start
 - 热加载，编辑之后保存自动 reload 刷新
 - You will see the build errors and lint warnings in the console
 
-### Build
+## Build
 
 `yarn run build`
 
-### webpack 配置
+## webpack 配置
 
 通过`yarn run eject`命令把 create-react-app 所有内建的配置暴露出来
 
-#### 自动格式化代码配置 [formatting-code-automatically](<(https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#formatting-code-automatically)>)
+### 自动格式化代码配置 [formatting-code-automatically](<(https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#formatting-code-automatically)>)
 
 第一：添加依赖包
 
@@ -188,22 +221,7 @@ trim_trailing_whitespace = false
 
 为了是`.editorconfig`配置文件生效，需要编辑器安装对应的插件；这里是通过添加`.prettier`文件，让 prettier 读取`.editorconfig`里边的配置
 
-#### vs code 编辑器配置 eslint 和 prettier, 开发时实时显示代码检查，保存时自动格式化
-
-安装插件`eslint`,`Prettier - Code formatter`
-
-User Settings 设置
-
-```json
-"editor.formatOnSave": true,
-"[javascript]": {
-  "editor.formatOnSave": false
-},
-"eslint.autoFixOnSave": true,
-"eslint.alwaysShowStatus": true,
-```
-
-#### 添加 `less` 配置
+### 添加 `less` 配置
 
 使用`create-react-app`创建的项目默认不支持 `less`，需要做如下配置
 
@@ -257,7 +275,7 @@ test: /\.css$/ 的 use 数组配置增加 less-loader
 
 **如果运行过程中发现有报 less 相关的错误，建议把（css|less）拆开两个规则**
 
-#### 添加 `antd` UI 库
+### 添加 `antd` UI 库
 
 第一：添加`antd`
 当前版本 antd v3.7.3 [更多前往](https://ant.design/docs/react/introduce-cn)
@@ -285,9 +303,9 @@ test: /\.css$/ 的 use 数组配置增加 less-loader
 
 `import { Button } from 'antd';`
 
-## 补充知识
+# 补充知识
 
-### npm
+## npm
 
 ```
 # 查看当前node版本
@@ -312,7 +330,7 @@ nvm use 8.11.1
 nvm alias default 8.11.1
 ```
 
-### yarn
+## yarn
 
 ```
 # 根据package.json安装全部的依赖
@@ -328,7 +346,7 @@ yarn add --dev packagenameB
 yarn remove packagenameC
 ```
 
-### tree
+## tree
 
 文件夹结构生成需要先安装 tree
 `tree -L 3 -I "node_modules" > README.md`
