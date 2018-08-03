@@ -202,6 +202,60 @@ User Settings 设置
 "eslint.alwaysShowStatus": true,
 ```
 
+#### 添加 `less` 配置
+
+使用`create-react-app`创建的项目默认不支持 `less`，需要做如下配置
+
+第一：先暴露 webpack 相关的配置文件
+
+`yarn run eject`
+
+第二：安装 `less-loader` 和 `less`
+
+`yarn add less less-loader --dev`
+
+第三：修改`webpack`配置，`webpack.config.dev.js` 和 `webpack.config.prod.js` 配置文件
+
+改动 1:
+增加`/\.css$/,/\.less$/`,修改后如下
+
+```json
+exclude: [
+  /\.(js|jsx|mjs)$/,
+  /\.html$/,
+  /\.json$/,
+  /\.css$/,
+  /\.less$/
+]
+```
+
+改动 2:
+
+test: /\.css$/ 改为 /\.(css|less)$/
+test: /\.css$/ 的 use 数组配置增加 less-loader
+
+```json
+{
+ test: /\.(css|less)$/,
+ use: [
+   require.resolve('style-loader'),
+   {
+     loader: require.resolve('css-loader'),
+     options: {
+       importLoaders: 1,
+     },
+   },
+   {},
+   {
+     loader: require.resolve('less-loader'), // compiles Less to CSS
+     options: { javascriptEnabled: true }
+   }
+ ],
+},
+```
+
+**如果运行过程中发现有报 less 相关的错误，建议把（css|less）拆开两个规则**
+
 ## 补充知识
 
 ### npm

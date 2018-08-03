@@ -100,6 +100,8 @@
   },
   "devDependencies": {
     "husky": "^0.14.3",
+    "less": "^3.8.0",
+    "less-loader": "^4.1.0",
     "lint-staged": "^7.2.0",
     "prettier": "^1.14.0"
   }
