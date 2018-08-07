@@ -303,6 +303,18 @@ test: /\.css$/ 的 use 数组配置增加 less-loader
 
 `import { Button } from 'antd';`
 
+## 安装依赖包
+
+状态管理 redux react-redux redux-thunk、
+路由管理 react-router-dom react-router-redux@next history、superagent 请求后端接口 ajax 库
+`yarn add redux react-redux redux-thunk superagent react-router-dom react-router-redux@next history`
+
+工具库 lodash、时间库 moment
+`yarn add lodash moment`
+
+redux-logger redux-devtools-extension: 开发时方便调试使用，[更多前往](https://github.com/yellowfrogCN/reduxDevTools/blob/master/README.md)
+`yarn add redux-logger redux-devtools-extension --dev`
+
 ## 参考文档
 
 项目是基于 React、redux、React-redux、React-router-dom、React-router-redux、antd，更多信息请参考
@@ -327,6 +339,15 @@ test: /\.css$/ 的 use 数组配置增加 less-loader
 - [antd](https://ant.design/docs/react/introduce-cn)
 
 # 补充知识
+
+## 命名规范
+
+- 文件及文件夹**小写字母命名**
+- 组件文件夹、组件文件名与组件名保持一致，并且**大驼峰命名( 帕斯卡命名 )**
+- 类名、构造函数名及 import 引用名，**大驼峰命名( 帕斯卡命名 )**
+- js 函数命名、jsx 属性命名，**小驼峰命名**
+- css 类名，**小写字母，多个字母用连接符`-` 隔开**
+- **jsx 属性双引号，其他单引号**
 
 ## npm
 
