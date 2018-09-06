@@ -1,0 +1,80 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #2d3a4b;
+  .login-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login-main {
+      width: 400px;
+      height: auto;
+      // height: 420px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 8px 0 18px 0 rgba(0, 0, 0, 0.15),
+        0 8px 18px 0 rgba(0, 0, 0, 0.18);
+    }
+  }
+  .login-header {
+    padding-top: 20px;
+    .title {
+      margin: 0;
+      font-size: 30px;
+      font-weight: normal;
+      color: #565656;
+      text-align: center;
+    }
+  }
+  .login-form {
+    margin: 0 35px;
+    .error-tips {
+      height: 30px;
+      font-size: 14px;
+      color: #ea3131;
+      text-align: center;
+    }
+    .tips {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 35px;
+      font-size: 12px;
+      color: #999;
+    }
+    .login-form-input {
+      height: 45px;
+      font-size: 16px;
+    }
+    .login-form-operation {
+      margin: 35px 0 0;
+    }
+    .login-form-password {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 30px;
+      margin-bottom: 40px;
+      font-size: 16px;
+      font-weight: 200;
+      .login-rememberme {
+        font-size: 16px;
+        .ant-checkbox-checked .ant-checkbox-inner {
+          width: 22px;
+          height: 22px;
+          &:after {
+            left: 7px;
+            top: 4px;
+          }
+        }
+      }
+    }
+    .login-form-button {
+      width: 100%;
+      height: 50px;
+      font-size: 18px;
+    }
+  }
+}

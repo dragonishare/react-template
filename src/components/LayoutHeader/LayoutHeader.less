@@ -1,0 +1,32 @@
+.layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &.ant-layout-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 200px;
+    z-index: 999;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+  }
+  .layout-header-right {
+    display: flex;
+    align-items: center;
+  }
+  .nickname {
+    font-weight: bold;
+  }
+  .logout {
+    font-weight: bold;
+    color: #2b92f9;
+    cursor: pointer;
+    &:hover {
+      color: #1c81e6;
+    }
+  }
+}
